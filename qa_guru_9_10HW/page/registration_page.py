@@ -1,5 +1,6 @@
 from selene import browser, have, be, by
 from selene.support.shared.jquery_style import s
+from qa_guru_9_10HW import resource
 from qa_guru_9_10HW.data.user import User, alex
 import os
 
@@ -58,7 +59,7 @@ class RegistrationPage:
         self.day.click()
         self.user_subject.should(be.blank).type(user.user_subject).press_enter()
         self.user_hobby.click()
-        self.user_picture.send_keys(os.path.abspath(f'image/{user.user_picture}'))
+        self.user_picture.send_keys(resource.path(user.user_picture))
         self.user_current_address.should(be.blank).type(user.user_current_address)
         self.user_state.should(be.blank).type(user.user_state).press_enter()
         self.user_city.should(be.blank).type(user.user_city).press_enter()
