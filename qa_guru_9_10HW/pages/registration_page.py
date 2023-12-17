@@ -1,4 +1,3 @@
-import os
 from selene import browser, have, be, by
 from selene.support.shared.jquery_style import s
 from qa_guru_9_10HW import resource
