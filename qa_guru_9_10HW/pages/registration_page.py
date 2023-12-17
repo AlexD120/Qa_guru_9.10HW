@@ -1,9 +1,12 @@
 import os
 from selene import browser, have, be, by
 from selene.support.shared.jquery_style import s
+from qa_guru_9_10HW import resource
+
 
 class RegistrationPage:
     """Открываем страницу и выполняем проверку"""
+
     def __init__(self):
         self.first_name = s('#firstName')
         self.last_name = s('#lastName')
@@ -17,7 +20,6 @@ class RegistrationPage:
         self.address = s('#currentAddress')
         self.city = s('#react-select-4-input')
         self.submit = s('#submit')
-
 
     def open(self):
         browser.open('/automation-practice-form')
@@ -59,8 +61,8 @@ class RegistrationPage:
         self.hobbies.click()
         return self
 
-    def fill_picture(self, picture_path):
-        self.picture.send_keys(os.path.abspath(picture_path))
+    def fill_picture(self, value):
+        self.picture.send_keys(resource.path(value))
         return self
 
     def fill_address(self, adress):

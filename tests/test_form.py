@@ -1,7 +1,6 @@
 from qa_guru_9_10HW.pages.registration_page import RegistrationPage
 
 
-
 def test_student_registration_form():
     """Открываем страницу и выполняем проверку что находимся на нужной странице"""
     registration_page = RegistrationPage()
@@ -30,7 +29,7 @@ def test_student_registration_form():
     registration_page.fill_hobbies()
 
     """Подгружаем Picture"""
-    registration_page.fill_picture('image/selfies.jpeg')
+    registration_page.fill_picture('selfies.jpeg')
 
     """Вводим Address"""
     registration_page.fill_address('South Street')
@@ -55,5 +54,5 @@ def test_student_registration_form():
         'Reading',
         'selfies.jpeg',
         'South Street',
-        'Haryana Karnal'
+        'Haryana Karnal',
     )
