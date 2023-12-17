@@ -5,8 +5,6 @@ from qa_guru_9_10HW import resource
 
 
 class RegistrationPage:
-    """Открываем страницу и выполняем проверку"""
-
     def __init__(self):
         self.first_name = s('#firstName')
         self.last_name = s('#lastName')
